@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "PluginQiita",
+  "short_name": "PlugQ",
+  "description": "Qiitaにストック機能や「後で見る」機能を追加する拡張です。",
+  "version": "0.0.1",
+  "icons": {
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*" ],
+    "js": ["content_scripts.js"],
+    "css": ["content_scripts.css"]
+  }],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "QiitaPlugin",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "background",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
